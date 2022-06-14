@@ -487,8 +487,8 @@ if __name__ == '__main__':
     parser.add_argument('--resume_last', type=bool, default=True)
     parser.add_argument('--resume_best', action='store_true')
 
-    parser.add_argument('--features_path', type=str, default='/mnt/hdd1/zengpengpeng/dataset/coco_caption/X101-features/features/X101_grid_feats_coco_trainval.hdf5')
-    parser.add_argument('--annotation_folder', type=str, default='/mnt/hdd1/zhujinkuan/dataset/coco_caption/annotations')
+    parser.add_argument('--features_path', type=str, default='')
+    parser.add_argument('--annotation_folder', type=str, default='/dataset/coco_caption/annotations')
 
     parser.add_argument('--logs_folder', type=str, default='tensorboard_logs')
     parser.add_argument('--xe_least', type=int, default=15)
@@ -508,9 +508,9 @@ if __name__ == '__main__':
     parser.add_argument('--RECOUNT', type=int, default=1)
     parser.add_argument('--INTERPOLATION', type=str, default='bicubic')
     parser.add_argument('--TESTCROP', type=bool, default=True)
-    parser.add_argument('--img_root_path', type=str, default='/mnt/hdd1/zhujinkuan/dataset/coco_caption/IMAGE_COCO')
-    # parser.add_argument('--swin_resume_path', type=str, default='/home/zhujinkuan/data/swin_large_patch4_window12_384_22k.pth')
-    parser.add_argument('--swin_resume_path', type=str, default='/home/gujiayang/data/swin_base_patch4_window7_224_22k.pth')
+    parser.add_argument('--img_root_path', type=str, default='/dataset/coco_caption/IMAGE_COCO')
+    # parser.add_argument('--swin_resume_path', type=str, default='/data/swin_large_patch4_window12_384_22k.pth')
+    parser.add_argument('--swin_resume_path', type=str, default='/data/swin_base_patch4_window7_224_22k.pth')
     parser.add_argument("--do_debug", action='store_true', help="Whether debug or not")
 
     args = parser.parse_args()
